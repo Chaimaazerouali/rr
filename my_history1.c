@@ -1,6 +1,6 @@
 #include "shell.h"
 
-  /**
+ /**
  * read_my_history - reads history from a file
  * @in: the parameter struct
  *
