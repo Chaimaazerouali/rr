@@ -61,7 +61,7 @@ my_builtin_table builtintbl[] = {
 int i;
 
 for (i = 0; builtintbl[i].type; i++)
-a{
+{
 if (my_strcmp(info->argv[0], builtintbl[i].type) == 0)
 {
 info->line_count++;
