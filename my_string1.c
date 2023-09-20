@@ -68,7 +68,7 @@ position++;
  * my_putchar - Outputs a character to the standard output.
  * @c: The character designated for display.
  *
- * Return: Returns 1 upon success. If an error occurs, -1 is returned and errno is adjusted accordingly.
+ * Return: Returns 1 upon success. If an error occurs, -1 is returned.
  */
 int my_putchar(char c)
 {

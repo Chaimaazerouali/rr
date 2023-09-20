@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * is_my_chain - Test if the current character in the buffer is a chain delimiter.
+ * is_my_chain - Test if the current char in the buffer is a chain delimiter.
  * @info: the parameter struct
  * @buf: the character buffer
  * @p: address of the current position in buf
@@ -26,7 +26,7 @@ info->cmd_buf_type = MY_CMD_AND;
 }
 else if (buf[position] == ';')
 {
-buf[position] = 0; 
+buf[position] = 0;
 info->cmd_buf_type = MY_CMD_CHAIN;
 }
 else
@@ -36,18 +36,19 @@ return (1);
 }
 
 /**
- * check_my_chain - Checks if chaining should continue based on the last status.
- * @info: the parameter struct
- * @b: the character buffer
- * @p: address of the current position in buf
- * @i: starting position in buf
- * @len: length of buf
- *
- * Return: Void
- */
-void check_my_chain(my_info_t *info, char *b, size_t *p, size_t start_pos, size_t buf_length)
+* check_my_chain - Checks if chaining should continue based on the last status.
+* @info: the parameter struct
+* @b: the character buffer
+* @p: address of the current position in buf
+* @start_pos: starting position in buf
+* @buf_length: length of buf
+*
+* Return: Void
+*/
+void check_my_chain(
+my_info_t *info, char *b, size_t *p, size_t start_pos, size_t buf_length)
 {
-size_t position = *p;
+sibuf_lengthze_t position = *p;
 
 if (info->cmd_buf_type == MY_CMD_AND && info->status)
 {
@@ -110,18 +111,21 @@ continue;
 
 if (!my_strcmp(info->argv[idx], "$?"))
 {
-replace_my_string(&(info->argv[idx]), my_strdup(convert_my_number(info->status, 10, 0)));
+replace_my_string(
+&(info->argv[idx]), my_strdup(convert_my_number(info->status, 10, 0)));
 continue;
 }
 if (!my_strcmp(info->argv[idx], "$$"))
 {
-replace_my_string(&(info->argv[idx]), my_strdup(convert_my_number(getpid(), 10, 0)));
+replace_my_string(
+&(info->argv[idx]), my_strdup(convert_my_number(getpid(), 10, 0)));
 continue;
 }
 current_node = my_node_starts_with(info->env, &info->argv[idx][1], '=');
 if (current_node)
 {
-replace_my_string(&(info->argv[idx]), my_strdup(my_strchr(current_node->str, '=') + 1));
+replace_my_string(
+&(info->argv[idx]), my_strdup(my_strchr(current_node->str, '=') + 1));
 continue;
 }
 replace_my_string(&info->argv[idx], my_strdup(""));
@@ -131,8 +135,8 @@ return (0);
 
 /**
  * replace_my_string - Replaces a string.
- * @old: address of the old string
- * @new: new string
+ * @old_str: address of the old string
+ * @new_str: new string
  *
  * Return: 1 if replaced, 0 otherwise
  */

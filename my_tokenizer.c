@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * **my_strtow - Separates a string into multiple words based on delimiters. 
- * Consecutive delimiters are disregarded.
+ * **my_strtow - Separates a string into multiple words based on delimiters.
+* Consecutive delimiters are disregarded.
  * @str: The main string to be split.
  * @d: Delimiter used to define the split.
  * Return: A pointer to an array of separated words or NULL if an error occurs.
@@ -17,7 +17,8 @@ return (NULL);
 if (!d)
 d = " ";
 for (idx = 0; str[idx] != '\0'; idx++)
-if (!my_is_delim(str[idx], d) && (my_is_delim(str[idx + 1], d) || !str[idx + 1]))
+if (!my_is_delim(str[idx], d) && (my_is_delim(str[idx + 1], d)
+|| !str[idx + 1]))
 wordCount++;
 
 if (wordCount == 0)

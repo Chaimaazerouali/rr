@@ -14,7 +14,7 @@ unsigned int idx;
 for (idx = 0; idx < n; idx++)
 s[idx] = b;
 
-return s;
+return (s);
 }
 
 /**
@@ -47,29 +47,27 @@ void *my_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 char *new_block;
 
 if (!ptr)
-return malloc(new_size);
+return (malloc(new_size));
 
 if (!new_size)
 {
 free(ptr);
-return NULL;
+return (NULL);
 }
 
 if (new_size == old_size)
-return ptr;
+return (ptr);
 
 new_block = malloc(new_size);
 
 if (!new_block)
-return NULL;
+return (NULL);
 
-// Determine the size to copy based on the smallest size.
 old_size = old_size < new_size ? old_size : new_size;
 
-// Copy old block contents to new block.
 for (unsigned int i = 0; i < old_size; i++)
 new_block[i] = ((char *)ptr)[i];
 
 free(ptr);
-return new_block;
+return (new_block);
 }

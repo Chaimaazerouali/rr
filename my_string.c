@@ -23,7 +23,7 @@ return (lengthCounter);
  * @firstString: the first input string.
  * @secondString: the second input string.
  *
- * Return: negative if firstString < secondString, positive if firstString > secondString, zero if firstString == secondString.
+ * Return: nega if firstStr < secStr, pos if firstStr > secondStr.
  */
 int my_strcmp(char *firstString, char *secondString)
 {
@@ -45,7 +45,7 @@ return (*firstString < *secondString ? -1 : 1);
  * @baseStr: the main string to search within.
  * @subStr: the target substring.
  *
- * Return: pointer to the next character after the substring in baseStr or NULL if not found.
+ * Return: pointer to the next char after the substring in baseStr or NULL.
  */
 char *my_starts_with(const char *baseStr, const char *subStr)
 {
