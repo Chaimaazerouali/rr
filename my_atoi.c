@@ -43,7 +43,7 @@ return (0);
  * my_atoi - converts a string to an integer
  * @sg: the string to be converted
  * Return: 0 if no numbers in string, converted number otherwise
- */
+*/
 
 int my_atoi(char *sg)
 {
