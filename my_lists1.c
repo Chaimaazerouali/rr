@@ -78,7 +78,7 @@ return (counter);
 }
 
 /**
- * my_node_starts_with - finds a node with a string beginning with a specific prefix
+ * my_node_starts_with - finds a node with a str begin with a specific prefix
  * @node: reference to my_list_t head
  * @prefix: string segment to look for
  * @c: subsequent character after the prefix to match

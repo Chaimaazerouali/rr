@@ -75,7 +75,7 @@ return (new_tail);
 }
 
 /**
- * print_my_list_str - Outputs only the string element of a my_list_t linked list
+ * print_my_list_str - Outputs only the str elmnt of a my_list_t linked list
  * @h: pointer to the foremost node
  *
  * Return: size of the list

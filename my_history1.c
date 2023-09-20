@@ -1,11 +1,11 @@
 #include "shell.h"
 
- /**
- * read_my_history - reads history from a file
- * @in: the parameter struct
- *
- * Return: histcount on success, 0 otherwise
- */
+/**
+* read_my_history - this function allow to read my history
+* @in: the parameter struct
+*
+* Return: histcount on success, 0 otherwise
+*/
 int read_my_history(my_info_t *in)
 {
 int i, l = 0, lt = 0;
