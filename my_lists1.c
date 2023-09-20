@@ -26,7 +26,7 @@ return (x);
 char **my_list_to_strings(my_list_t *head)
 {
 my_list_t *node = head;
-size_t x= my_list_len(head), j;
+size_t x = my_list_len(head), j;
 char **s;
 char *sr;
 

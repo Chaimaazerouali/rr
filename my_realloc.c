@@ -46,7 +46,7 @@ void *my_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 char *new_block;
 unsigned int i;
- 
+
 if (!ptr)
 return (malloc(new_size));
 
@@ -66,7 +66,7 @@ return (NULL);
 
 old_size = old_size < new_size ? old_size : new_size;
 
-for (i = 0; i < old_size; i++)
+for ( i = 0; i < old_size; i++)
 new_block[i] = ((char *)ptr)[i];
 
 free(ptr);
