@@ -48,7 +48,7 @@ return (1);
 void check_my_chain(
 my_info_t *info, char *b, size_t *p, size_t start_pos, size_t buf_length)
 {
-sibuf_lengthze_t position = *p;
+size_t position = *p;
 
 if (info->cmd_buf_type == MY_CMD_AND && info->status)
 {
